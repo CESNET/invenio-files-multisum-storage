@@ -1,0 +1,11 @@
+..
+    Copyright (C) 2019 CESNET.
+
+    PyFS Multi-checksum File Storage is free software; you can redistribute it and/or modify it
+    under the terms of the MIT License; see LICENSE file for more details.
+
+Configuration
+=============
+
+.. automodule:: pyfs_multisum_file_storage.config
+   :members:
