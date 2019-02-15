@@ -7,26 +7,22 @@
 
 """Checksum algorithms."""
 from collections import OrderedDict
-from invenio_files_rest.proxies import current_files_rest
 
 
-class MultiHash(object):
+class MultiChecksum(object):
     """ Class for computing/verifying multiple hash algorithms """
 
     algos = OrderedDict()
 
-    def __init__(self, algos: list):
+    def __init__(self, algos: dict):
         """ Initialize class with supported algos """
-        for algo in algos:
-            try:
-                self.algos[algo] = current_files_rest.supported_checksums[algo]
-            except KeyError:
-                raise AttributeError('Unsupported checksum algo {}'.format(algo))
+        self.algos = algos
 
     def __call__(self, *args, **kwargs):
         """ Initialize individual algos and return self as message digest """
         for algo, m in self.algos.items():
-            self.algos[algo] = m()
+            if callable(m):
+                self.algos[algo] = m()
 
         return self
 
