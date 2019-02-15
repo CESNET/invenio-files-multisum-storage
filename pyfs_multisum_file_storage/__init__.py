@@ -13,7 +13,6 @@ from __future__ import absolute_import, print_function
 from .ext import PyFSMultisumFileStorage
 from .version import __version__
 from .storage import PyFSMultiChecksumFileStorage, pyfs_multichecksum_storage_factory
-from .proxies import current_multisum_storage
 
-__all__ = ('__version__', 'PyFSMultisumFileStorage', 'current_multisum_storage',
+__all__ = ('__version__', 'PyFSMultisumFileStorage',
            'pyfs_multichecksum_storage_factory' ,'PyFSMultiChecksumFileStorage')
