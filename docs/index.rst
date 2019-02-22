@@ -1,7 +1,7 @@
 ..
     Copyright (C) 2019 CESNET.
 
-    PyFS Multi-checksum File Storage is free software; you can redistribute it and/or modify it
+    Invenio Files Multi-Checksum Storage is free software; you can redistribute it and/or modify it
     under the terms of the MIT License; see LICENSE file for more details.
 
 .. include:: ../README.rst
@@ -10,7 +10,7 @@ User's Guide
 ------------
 
 This part of the documentation will show you how to get started in using
-PyFS Multi-checksum File Storage.
+Invenio Files Multi-Checksum Storage.
 
 .. toctree::
    :maxdepth: 2

@@ -9,7 +9,7 @@
 from invenio_files_rest.storage import PyFSFileStorage, pyfs_storage_factory
 
 
-class PyFSMultiChecksumFileStorage(PyFSFileStorage):
+class MultiChecksumFileStorage(PyFSFileStorage):
     """File system storage extending PyFSFileStorage with multiple checksum algorithms support.
     """
 
@@ -17,21 +17,23 @@ class PyFSMultiChecksumFileStorage(PyFSFileStorage):
                   checksum=None, trusted=False, chunk_size=None,
                   as_attachment=False):
         """Send the file to the client."""
-        checksums = checksum.split(';')
-        for sum in checksums:
-            if sum.split(':')[0] == 'md5':
+        algos, checksums = checksum.split(':')
+        algos = algos.split('+')
+        checksums = checksums.split(';')
+        for idx, sum in enumerate(checksums):
+            if algos[idx] == 'md5':
                 checksum = sum
                 break
         else:
             checksum = None
 
-        return super(PyFSMultiChecksumFileStorage, self).send_file(filename, mimetype, restricted, checksum,
+        return super(MultiChecksumFileStorage, self).send_file(filename, mimetype, restricted, checksum,
                                                                    trusted, chunk_size, as_attachment)
 
 
-def pyfs_multichecksum_storage_factory(fileinstance=None, default_location=None,
+def multichecksum_storage_factory(fileinstance=None, default_location=None,
                                        default_storage_class=None,
-                                       filestorage_class=PyFSMultiChecksumFileStorage, fileurl=None,
+                                       filestorage_class=MultiChecksumFileStorage, fileurl=None,
                                        size=None, modified=None, clean_dir=True):
     """Get factory function for creating a PyFS file storage instance."""
     return pyfs_storage_factory(fileinstance, default_location, default_storage_class,

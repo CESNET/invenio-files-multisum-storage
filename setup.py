@@ -2,10 +2,10 @@
 #
 # Copyright (C) 2019 CESNET.
 #
-# PyFS Multi-checksum File Storage is free software; you can redistribute it and/or modify it
+# Invenio Files Multi-Checksum Storage is free software; you can redistribute it and/or modify it
 # under the terms of the MIT License; see LICENSE file for more details.
 
-"""PyFS File Storage supporting multiple checksum algos"""
+"""PyFS File Storage For Invenio with support for multiple checksum algos"""
 
 import os
 
@@ -31,7 +31,7 @@ setup_requires = [
 
 install_requires = [
     'Flask-BabelEx>=0.9.3',
-    'invenio-files-rest==1.0.0a23',
+    'invenio_files_rest>=1.0.0a23'
     'arrow>=0.12.1',
 ]
 
@@ -40,28 +40,29 @@ packages = find_packages()
 
 # Get the version string. Cannot be done with import!
 g = {}
-with open(os.path.join('pyfs_multisum_file_storage', 'version.py'), 'rt') as fp:
+with open(os.path.join('invenio_files_multisum_storage', 'version.py'), 'rt') as fp:
     exec(fp.read(), g)
     version = g['__version__']
 
 setup(
-    name='pyfs-multisum-file-storage',
+    name='invenio-files-multisum-storage',
     version=version,
     description=__doc__,
     long_description=readme,
-    keywords='pyfs-multisum-file-storage Invenio',
+    keywords='invenio-files-multisum-storage Invenio',
     license='MIT',
     author='Miroslav Bauer',
     author_email='bauer@cesnet.cz',
-    url='https://github.com/CESNET/invenio-filestorage',
+    url='https://github.com/CESNET/invenio-files-multisum-storage',
     packages=packages,
     zip_safe=False,
     include_package_data=True,
     platforms='any',
     entry_points={
         'invenio_base.apps': [
-            'pyfs_multisum_file_storage = pyfs_multisum_file_storage:PyFSMultisumFileStorage',
-        ]
+            'invenio_files_multisum_storage = invenio_files_multisum_storage:InvenioFilesMultiChecksumStorage',
+        ],
+
     },
     install_requires=install_requires,
     setup_requires=setup_requires,

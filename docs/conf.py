@@ -2,7 +2,7 @@
 #
 # Copyright (C) 2019 CESNET.
 #
-# PyFS Multi-checksum File Storage is free software; you can redistribute it and/or modify it
+# Invenio Files Multi-Checksum Storage is free software; you can redistribute it and/or modify it
 # under the terms of the MIT License; see LICENSE file for more details.
 
 """Sphinx configuration."""
@@ -47,7 +47,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'PyFS Multi-checksum File Storage'
+project = u'Invenio Files Multi-Checksum Storage'
 copyright = u'2019, CESNET'
 author = u'Miroslav Bauer'
 
@@ -60,7 +60,7 @@ author = u'Miroslav Bauer'
 # Get the version string. Cannot be done with import!
 g = {}
 with open(os.path.join(os.path.dirname(__file__), '..',
-                       'pyfs_multisum_file_storage', 'version.py'),
+                       'invenio_files_multisum_storage', 'version.py'),
           'rt') as fp:
     exec(fp.read(), g)
     version = g['__version__']
@@ -117,15 +117,15 @@ todo_include_todos = False
 html_theme = 'alabaster'
 
 html_theme_options = {
-    'description': 'PyFS File Storage supporting multiple checksum algos',
+    'description': 'PyFS File Storage For Invenio with support for multiple checksum algos',
     'github_user': 'inveniosoftware',
-    'github_repo': 'pyfs-multisum-file-storage',
+    'github_repo': 'invenio-files-multisum-storage',
     'github_button': False,
     'github_banner': True,
     'show_powered_by': False,
     'extra_nav_links': {
-        'pyfs-multisum-file-storage@GitHub': 'https://github.com/CESNET/invenio-filestorage',
-        'pyfs-multisum-file-storage@PyPI': 'https://pypi.python.org/pypi/pyfs-multisum-file-storage/',
+        'invenio-files-multisum-storage@GitHub': 'https://github.com/CESNET/invenio-files-multisum-storage',
+        'invenio-files-multisum-storage@PyPI': 'https://pypi.python.org/pypi/invenio-files-multisum-storage/',
     }
 }
 
@@ -230,7 +230,7 @@ html_sidebars = {
 #html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'pyfs-multisum-file-storage_namedoc'
+htmlhelp_basename = 'invenio-files-multisum-storage_namedoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -252,7 +252,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'pyfs-multisum-file-storage.tex', u'pyfs-multisum-file-storage Documentation',
+    (master_doc, 'invenio-files-multisum-storage.tex', u'invenio-files-multisum-storage Documentation',
      u'Miroslav Bauer', 'manual'),
 ]
 
@@ -282,7 +282,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'pyfs-multisum-file-storage', u'pyfs-multisum-file-storage Documentation',
+    (master_doc, 'invenio-files-multisum-storage', u'invenio-files-multisum-storage Documentation',
      [author], 1)
 ]
 
@@ -296,8 +296,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'pyfs-multisum-file-storage', u'PyFS Multi-checksum File Storage Documentation',
-     author, 'pyfs-multisum-file-storage', 'PyFS File Storage supporting multiple checksum algos',
+    (master_doc, 'invenio-files-multisum-storage', u'Invenio Files Multi-Checksum Storage Documentation',
+     author, 'invenio-files-multisum-storage', 'PyFS File Storage For Invenio with support for multiple checksum algos',
      'Miscellaneous'),
 ]
 

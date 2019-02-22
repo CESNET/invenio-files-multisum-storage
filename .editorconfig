@@ -2,7 +2,7 @@
 #
 # Copyright (C) 2019 CESNET.
 #
-# PyFS Multi-checksum File Storage is free software; you can redistribute it and/or modify it
+# Invenio Files Multi-Checksum Storage is free software; you can redistribute it and/or modify it
 # under the terms of the MIT License; see LICENSE file for more details.
 
 root = true
@@ -18,7 +18,7 @@ charset = utf-8
 [*.py]
 indent_size = 4
 # isort plugin configuration
-known_first_party = pyfs_multisum_file_storage
+known_first_party = invenio_files_multisum_storage
 multi_line_output = 2
 default_section = THIRDPARTY
 skip = .eggs

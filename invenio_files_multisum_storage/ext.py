@@ -2,16 +2,18 @@
 #
 # Copyright (C) 2019 CESNET.
 #
-# PyFS Multi-checksum File Storage is free software; you can redistribute it and/or modify it
+# Invenio Files Multi-Checksum Storage is free software; you can redistribute it and/or modify it
 # under the terms of the MIT License; see LICENSE file for more details.
 
-"""Flask extension for PyFS Multi-checksum File Storage."""
+"""Flask extension for Invenio Files Multi-Checksum Storage."""
 
 from __future__ import absolute_import, print_function
 
+from . import config
 
-class PyFSMultisumFileStorage(object):
-    """PyFS Multi-checksum File Storage extension."""
+
+class InvenioFilesMultiChecksumStorage(object):
+    """Invenio Files Multi-Checksum Storage extension."""
 
     def __init__(self, app=None):
         """Extension initialization."""
@@ -20,3 +22,4 @@ class PyFSMultisumFileStorage(object):
 
     def init_app(self, app):
         """Flask application initialization."""
+        pass
