@@ -8,14 +8,14 @@
  Invenio Files Multi-Checksum Storage
 ======================================
 
-.. image:: https://img.shields.io/github/license/CESNET/invenio-files-multisum-storage.svg
-        :target: https://github.com/CESNET/invenio-files-multisum-storage/blob/master/LICENSE
+.. image:: https://img.shields.io/github/license/oarepo/invenio-files-multisum-storage.svg
+        :target: https://github.com/oarepo/invenio-files-multisum-storage/blob/master/LICENSE
 
-.. image:: https://img.shields.io/travis/CESNET/invenio-files-multisum-storage.svg
-        :target: https://travis-ci.org/CESNET/invenio-files-multisum-storage
+.. image:: https://img.shields.io/travis/oarepo/invenio-files-multisum-storage.svg
+        :target: https://travis-ci.org/oarepo/invenio-files-multisum-storage
 
-.. image:: https://img.shields.io/coveralls/CESNET/invenio-files-multisum-storage.svg
-        :target: https://coveralls.io/r/CESNET/invenio-files-multisum-storage
+.. image:: https://img.shields.io/coveralls/oarepo/invenio-files-multisum-storage.svg
+        :target: https://coveralls.io/r/oarepo/invenio-files-multisum-storage
 
 .. image:: https://img.shields.io/pypi/v/invenio-files-multisum-storage.svg
         :target: https://pypi.org/pypi/invenio-files-multisum-storage

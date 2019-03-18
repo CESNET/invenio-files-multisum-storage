@@ -124,7 +124,7 @@ html_theme_options = {
     'github_banner': True,
     'show_powered_by': False,
     'extra_nav_links': {
-        'invenio-files-multisum-storage@GitHub': 'https://github.com/CESNET/invenio-files-multisum-storage',
+        'invenio-files-multisum-storage@GitHub': 'https://github.com/oarepo/invenio-files-multisum-storage',
         'invenio-files-multisum-storage@PyPI': 'https://pypi.python.org/pypi/invenio-files-multisum-storage/',
     }
 }

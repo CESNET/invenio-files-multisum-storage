@@ -69,5 +69,5 @@ deploy:
   on:
     tags: true
     python: "3.6"
-    repo: CESNET/invenio-files-multisum-storage
+    repo: oarepo/invenio-files-multisum-storage
     condition: $DEPLOY = true

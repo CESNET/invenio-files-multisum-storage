@@ -53,7 +53,7 @@ setup(
     license='MIT',
     author='Miroslav Bauer',
     author_email='bauer@cesnet.cz',
-    url='https://github.com/CESNET/invenio-files-multisum-storage',
+    url='https://github.com/oarepo/invenio-files-multisum-storage',
     packages=packages,
     zip_safe=False,
     include_package_data=True,
